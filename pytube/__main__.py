@@ -93,7 +93,7 @@ class YouTube:
 
     def __eq__(self, o: object) -> bool:
         # Compare types and urls, if they're same return true, else return false.
-        return type(o) == type(self) and o.watch_url == self.watch_url
+        return type(o) is type(self) and o.watch_url == self.watch_url
 
     @property
     def watch_html(self):
@@ -474,6 +474,6 @@ class YouTube:
             The video id of the YouTube video.
 
         :rtype: :class:`YouTube <YouTube>`
-        
+
         """
         return YouTube(f"https://www.youtube.com/watch?v={video_id}")

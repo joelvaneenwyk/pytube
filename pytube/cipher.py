@@ -548,8 +548,8 @@ def throttling_cipher_function(d: list, e: str):
     #  we change the input list
     copied_list = d.copy()
 
-    for m, l in enumerate(copied_list):
-        bracket_val = (h.index(l) - h.index(this[m]) + m - 32 + f) % len(h)
+    for m, lookup in enumerate(copied_list):
+        bracket_val = (h.index(lookup) - h.index(this[m]) + m - 32 + f) % len(h)
         this.append(
             h[bracket_val]
         )

@@ -143,7 +143,7 @@ def stream(
     downloaded = 0
     while downloaded < file_size:
         stop_pos = min(downloaded + default_range_size, file_size) - 1
-        range_header = f"bytes={downloaded}-{stop_pos}"
+        # range_header = f"bytes={downloaded}-{stop_pos}"
         tries = 0
 
         # Attempt to make the request multiple times as necessary.
