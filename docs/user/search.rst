@@ -21,7 +21,7 @@ Using the Search object is really easy::
         <pytube.__main__.YouTube object: videoId=PKtnafFtfEo>, \
         ...\
     ]
-    >>> 
+    >>>
 
 Due to the potential for an endless stream of results, and in order to prevent
 a user from accidentally entering an infinite loop of requesting additional
@@ -33,7 +33,7 @@ the ``.results`` attribute::
     >>> s.get_next_results()
     >>> len(s.results)
     34
-    >>> 
+    >>>
 
 Additional functionality
 ========================

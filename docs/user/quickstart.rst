@@ -47,7 +47,7 @@ when you create a YouTube object::
         )
 
 When instantiating a YouTube object, these named arguments can be passed in to
-improve functionality. 
+improve functionality.
 
 The on_progress_callback function will run whenever a chunk is downloaded from
 a video, and is called with three arguments: the stream, the data chunk, and

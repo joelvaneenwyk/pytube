@@ -8,7 +8,7 @@ This guide will walk you through the basics of working with pytube Channels.
 Creating a Channel
 ------------------
 
-Using pytube to interact with channels is similar to interacting with playlists. 
+Using pytube to interact with channels is similar to interacting with playlists.
 Begin by importing the Channel class::
 
     >>> from pytube import Channel

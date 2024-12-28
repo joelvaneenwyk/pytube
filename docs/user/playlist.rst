@@ -8,7 +8,7 @@ This guide will walk you through the basics of working with pytube Playlists.
 Creating a Playlist
 -------------------
 
-Using pytube to interact with playlists is very simple. 
+Using pytube to interact with playlists is very simple.
 Begin by importing the Playlist class::
 
     >>> from pytube import Playlist
