@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """This module contains setup instructions for pytube."""
+
 import codecs
 import os
 
@@ -19,5 +20,5 @@ setup(
     packages=["pytube", "pytube.contrib"],
     url="https://github.com/pytube/pytube",
     include_package_data=True,
-    zip_safe=True
+    zip_safe=True,
 )
