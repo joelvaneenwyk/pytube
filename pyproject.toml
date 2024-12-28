@@ -3,7 +3,7 @@ name = "pytube"
 version = "0.1.0"
 description = "Python 3 library for downloading YouTube Videos."
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 dependencies = []
 authors = [
     { name = "Ronnie Ghose", email = "hey@pytube.io" },
@@ -18,11 +18,10 @@ classifiers = [
     "License :: OSI Approved :: The Unlicense (Unlicense)",
     "Natural Language :: English",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python",
     "Topic :: Internet",
     "Topic :: Multimedia :: Video",
@@ -41,6 +40,13 @@ pytube = "pytube.cli:main"
 # Correctly define the license section
 [project.license]
 file = "LICENSE" # or use text = "Your license text here"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pytube", "pytube.contrib"]
 
 [dependency-groups]
 dev = [
