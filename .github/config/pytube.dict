@@ -1,4 +1,5 @@
 appdirs
+autopep
 bumpversion
 certifi
 cffi
@@ -33,6 +34,7 @@ pycparser
 pyflakes
 pygments
 pylint
+pypi
 pytube
 pywin
 pyyaml
