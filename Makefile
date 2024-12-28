@@ -1,9 +1,8 @@
 dev:
-	pipenv install --dev
+	uv sync -v
 
 pipenv:
-	pip install pipenv
-	pipenv install --dev
+	uv sync -v
 
 deploy-patch: clean requirements bumpversion-patch upload clean
 
@@ -12,26 +11,26 @@ deploy-minor: clean requirements bumpversion-minor upload clean
 deploy-major: clean requirements bumpversion-major upload clean
 
 requirements:
-	pipenv_to_requirements
+	uv lock
 
 bumpversion-patch:
-	bumpversion patch
+	uv run bumpversion patch
 	git push
 	git push --tags
 
 bumpversion-minor:
-	bumpversion minor
+	uv run bumpversion minor
 	git push
 	git push --tags
 
 bumpversion-major:
-	bumpversion major
+	uv run bumpversion major
 	git push
 	git push --tags
 
 upload:
-	python setup.py sdist bdist_wheel
-	twine upload dist/*
+	uv run python setup.py sdist bdist_wheel
+	uv run twine upload dist/*
 
 help:
 	@echo "clean - remove all build, test, coverage and Python artifacts"
@@ -40,11 +39,10 @@ help:
 	@echo "install - install the package to the active Python's site-packages"
 
 ci:
-	pip install pipenv
-	pipenv install --dev --skip-lock
-	pipenv run flake8
-	# pipenv run pytest --cov-report term-missing # --cov=humps
-	pipenv run coverage run -m pytest
+	uv sync
+	uv run flake8
+	# uv run pytest --cov-report term-missing # --cov=humps
+	uv run coverage run -m pytest
 
 clean: clean-build clean-pyc
 
@@ -63,4 +61,4 @@ clean-pyc:
 	find . -name '__pycache__' -exec rm -fr {} +
 
 install: clean
-	python setup.py install
+	uv run python setup.py install
