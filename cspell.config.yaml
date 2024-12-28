@@ -1,0 +1,11 @@
+version: '0.2'
+ignorePaths: []
+dictionaryDefinitions:
+  - name: pytube
+    path: ./.github/config/pytube.dict
+    addWords: true
+dictionaries:
+  - pytube
+words: []
+ignoreWords: []
+import: []
