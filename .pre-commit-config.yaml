@@ -47,5 +47,5 @@ repos:
       - id: black
         name: 'Ruthlessly format Python'
         args:
-          - '--line-length=79'
+          - '--line-length=95'
           - '--target-version=py37'
