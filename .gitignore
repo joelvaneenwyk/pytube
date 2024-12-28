@@ -143,3 +143,5 @@ __cache__/
 
 .venv/
 .git/
+.ruff_cache/
+.cspell/
