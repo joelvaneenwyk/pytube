@@ -96,7 +96,6 @@ _autosummary
 Icon?
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -141,3 +140,6 @@ env/
 
 # Token cache location
 __cache__/
+
+.venv/
+.git/
