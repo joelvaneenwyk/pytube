@@ -15,7 +15,6 @@
 
 *pytube* is a genuine, lightweight, dependency-free Python library (and command-line utility) for downloading YouTube videos.
 
-
 ## Documentation
 
 Detailed documentation about the usage of the library can be found at [pytube.io](https://pytube.io). This is recommended for most cases. If you want to hastily download a single video, the [quick start](#quickstart) guide below might be what you're looking for.
